@@ -51,9 +51,7 @@ function addStar() {
 }
 Array(200).fill().forEach(addStar)
 
-const spaceTexture = new THREE.TextureLoader().load('./space.jpeg', () => {
-  console.log('Space texture loaded successfully');
-});
+const spaceTexture = new THREE.TextureLoader().load('./space.jpeg')
 scene.background = spaceTexture;
 
 
@@ -95,12 +93,10 @@ function moveCamera() {
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  // earth.rotation.x += 0.05;
+ 
   earth.rotation.y += 0.075;
-  // earth.rotation.z += 0.05;
+ 
 
-  // jefferson.rotation.y += 0.01;
-  // jefferson.rotation.z += 0.01;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
